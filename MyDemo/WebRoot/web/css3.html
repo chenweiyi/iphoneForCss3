@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>css3.html</title>
+    <link rel="stylesheet" type="text/css" href="../css/css3animation.css">
+    <script type="text/javascript" src="../util/GeoSmarter.js"></script>
+    <script type="text/javascript" src="../util/Element.js"></script>
+    <script type='text/javascript'>
+    	window.onload = function(){
+    		var li = document.getElementById("time");
+    		setInterval(function(){
+    			li.innerText = countTime();
+        		countTime();
+    		},1000);
+    		
+    		var home = document.getElementById("home");
+    		var c1 = document.getElementsByClassName("c-c-1")[0];
+    		var c2 = document.getElementsByClassName("c-c-2")[0];
+    		home.onclick = function(){
+    			GeoSmarter.Element.addClass(c1, "hiding");
+    			GeoSmarter.Element.addClass(c2, "showing");
+    			
+    		} 
+    	}
+    	function countTime(){
+    		var date = new Date();
+    		var time=""
+    		/* if(date.getHours()<12){
+    			time += date.getHours() + ":" + date.getMinutes() + "AM";
+    		}
+    		if(date.getHours()>=12){
+    			if(date.getMinutes())
+    			time += date.getHours() + ":" + date.getMinutes() + "AM";
+    		} */
+    		time += date.getHours() + ":" + date.getMinutes();
+    		return time;
+    		
+    	}
+    	
+    	
+    	
+    </script>
+  </head>
+  <body>
+  <div class="iphone">
+  	<div class="head">
+  		<div class="receiver"></div>
+  	</div>
+  	<div class="content">
+  		<div class='c-h'>
+  			<ul><li class="signal"></li><li class="signal"></li><li class="signal"></li><li class="special1"></li><li class="special2"></li><li class='signal-t'>中国移动</li><li class="time" id='time'>17:20</li><li class='battery-t'>50%</li><li class="battery"></li></ul>
+  		</div>
+  		<img src="../css/img/music.png" alt="music" class='music'/>
+  		<div class='c-c-1'>
+			<div class='wrap'><div class='left'></div><div class='right'></div></div>  		
+  		</div>
+  		<div class='c-c-2'></div>
+  	</div>
+  	<div class="foot"><div class='home' id='home'></div></div>
+  </div>
+  </body>
+</html>

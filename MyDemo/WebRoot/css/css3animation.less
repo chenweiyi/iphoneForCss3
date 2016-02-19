@@ -1,0 +1,79 @@
+
+@width:320px;
+@top-ht:40px;
+@foot-ht:40px;
+@content-ht:560px;
+@border-style : 1px solid #000;
+@top-bg : #fff;
+@foot-bg: #fff;
+@content-bg : rgb(247,193,107);
+@radius:40px;
+
+body{
+	margin:0;
+	padding:0;
+}
+.iphone{
+	width:@width;
+	margin:20px auto;
+	.head{
+		height:@top-ht;
+		border:@border-style;
+		border-bottom:0px;
+		border-top-left-radius:@radius;
+		border-top-right-radius:@radius;
+		background-color:@top-bg;
+		.receiver{
+			width:50px;
+			height:10px;
+			border-radius:2px;
+			border:1px solid #000;
+			background-color:#ccc;
+			margin:15px auto;
+		}
+	}
+	.content{
+		height:@content-ht;
+		border-left:@border-style;
+		border-right:@border-style;
+		background-color:@content-bg ;
+		.c-h{
+			height:20px;
+			width:100%;
+			background-color:#000;
+			ul{
+				list-style-type:none;
+				height:12px;
+				width:100%;
+				margin:0px;
+				padding:5px 0 0 10px;
+				li{
+					float:left;
+				}
+				.signal{
+					width:8px;
+					height:8px;
+					border-radius:50%;
+					border:1px solid #fff;
+					background-color:#fff;
+					margin:0px 2px 0px 0px;
+				}
+				.time{
+					color:#fff;
+					font-size:12px;
+				}
+			}
+			
+		}
+	}
+	.foot{
+		height:@foot-ht;
+		border:@border-style;
+		border-top:0px;
+		border-bottom-left-radius:@radius;
+		border-bottom-right-radius:@radius;
+		background-color:@foot-bg;
+	}
+}
+
+

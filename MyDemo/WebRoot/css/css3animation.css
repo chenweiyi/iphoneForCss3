@@ -1,0 +1,455 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size:10px;
+  font-family:Microsoft Yahei;
+  
+}
+.iphone {
+  width: 320px;
+  margin: 20px auto;
+}
+.iphone .head {
+  height: 40px;
+  border: 1px solid #000;
+  border-bottom: 0px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #fff;
+}
+.iphone .head .receiver {
+  width: 50px;
+  height: 10px;
+  border-radius: 2px;
+  border: 1px solid #000;
+  background-color: #ccc;
+  margin: 15px auto;
+}
+.iphone .content {
+  height: 560px;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  background-color: #fff;
+  position:relative;
+}
+.iphone .content .c-h {
+  height: 20px;
+  width: 100%;
+  background-color: #000;
+}
+.iphone .content .c-h ul {
+  list-style-type: none;
+  height: 20px;
+  width: 100%;
+  margin: 0px;
+  padding: 0 0 0 10px;
+}
+.iphone .content .c-h ul li {
+  float: left;
+}
+.iphone .content .c-h ul .signal,.special1,.special2 {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: #fff;
+  margin: 5px 1px 0px 0px;
+}
+.content .special1,.special2{
+	opacity:0;
+}
+.content .special1{
+	-webkit-animation:signal1 .8s ease-in-out infinite alternate;
+	   -moz-animation:signal1 .8s ease-in-out infinite alternate;
+	    -ms-animation:signal1 .8s ease-in-out infinite alternate;
+	     -o-animation:signal1 .8s ease-in-out infinite alternate;
+	        animation:signal1 .8s ease-in-out infinite alternate;
+}
+.content .special2{
+	-webkit-animation:signal2 .8s ease-in-out infinite alternate;
+	   -moz-animation:signal2 .8s ease-in-out infinite alternate;
+	    -ms-animation:signal2 .8s ease-in-out infinite alternate;
+	     -o-animation:signal2 .8s ease-in-out infinite alternate;
+	        animation:signal2 .8s ease-in-out infinite alternate;
+}
+.content .signal-t{
+	color:#fff;
+	font-size:10px;
+	margin:0;
+	font-weight:normal;
+	
+}
+.iphone .content .c-h ul .time {
+  color: #fff;
+  font-size: 10px;
+  margin: 1px 0px 0px 45px;
+  font-weight: bold;
+  font-family: Microsoft Yahei;
+}
+
+.iphone .foot {
+  position:relative;
+  height: 40px;
+  border: 1px solid #000;
+  border-top: 0px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  background-color: #fff;
+}
+.content .battery{
+	position:relative;
+	display:inline-block;
+	border:1px solid #fff;
+	width:24px;
+	height:8px;
+	margin:4px 0px 0px 2px;
+}
+.content .battery-t{
+	color:#fff;
+	font-size:10px;
+	margin:0;
+	font-weight:normal;
+	margin: 1px 0 0 62px;
+}
+/* 电池头 */
+.content .battery:after{
+	content:"";
+	position:absolute;
+	display:inline-block;
+	width:2px;
+	height:2px;
+	border:1px solid #fff;
+    top: 3px;
+    left: 25px;
+    border-left: 0px;
+    background-color: #fff;
+}
+/* 电池电量 */
+.content .battery:before{
+	content:"";
+	position:absolute;
+	display:inline-block;
+	width:12px;
+	height:8px;
+	border:1px solid #fff;
+    top: 0px;
+    left: 0px;
+    border-left: 0px;
+    background-color: #fff;
+    -webkit-animation:wchanging 1s linear infinite alternate;
+       -moz-animation:wchanging 1s linear infinite alternate;
+        -ms-animation:wchanging 1s linear infinite alternate;
+         -o-animation:wchanging 1s linear infinite alternate;
+            animation:wchanging 1s linear infinite alternate;
+}
+/* 背景 */
+.content .c-c-1{
+	position:relative;
+	height:540px;
+	background-color:#f7c16b;
+	border-bottom:1px solid #fff;
+}
+.content .c-c-2{
+	position:relative;
+	height:0px;
+	background-color:#3693d6;
+}
+
+/* 音乐按钮 */
+.music{
+	position:absolute;
+	top:40px;
+	right:20px;
+	width:40px;
+	height:40px;
+	z-index:10;
+}
+/* 按钮 */
+.foot .home{
+	position:absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	margin:auto;
+	width:30px;
+	height:30px;
+	cursor:pointer;
+	border:1px solid #ccc;
+	border-radius:50%;
+	-webkit-box-shadow:0 0 3px 2px rgb(255,221,0) inset;
+	   -moz-box-shadow:0 0 3px 2px rgb(255,221,0) inset;
+	    -ms-box-shadow:0 0 3px 2px rgb(255,221,0) inset;
+	     -o-box-shadow:0 0 3px 2px rgb(255,221,0) inset;
+	        box-shadow:0 0 3px 2px rgb(255,221,0) inset;
+	-webkit-animation:shadowing 1s ease-in-out infinite;
+	   -moz-animation:shadowing 1s ease-in-out infinite;
+	    -ms-animation:shadowing 1s ease-in-out infinite;
+	     -o-animation:shadowing 1s ease-in-out infinite;
+	        animation:shadowing 1s ease-in-out infinite;
+}
+/* 向上的箭头 */
+.wrap{
+	position:absolute;
+	width:30px;
+	height:30px;
+	left:0;
+	right:0;
+	bottom:20px;
+	margin:auto;
+	cursor:pointer;
+	opacity:0;
+	-webkit-animation:jt 2s linear infinite;
+	   -moz-animation:jt 2s linear infinite;
+	    -ms-animation:jt 2s linear infinite;
+	     -o-animation:jt 2s linear infinite;
+	        animation:jt 2s linear infinite;
+	
+	
+}
+.wrap > .left{
+	position:absolute;
+	width:14px;
+	height:5px;
+	border:1px solid #fff;
+	left:-6px;
+	right:0;
+	margin:auto;
+	background-color:#fff;
+	-webkit-transform:rotate(135deg);
+	   -moz-transform:rotate(135deg);
+	    -ms-transform:rotate(135deg);
+	     -o-transform:rotate(135deg);
+	        transform:rotate(135deg); 
+}
+.wrap > .right{
+	position:absolute;
+	width:14px;
+	height:5px;
+	left:6px;
+	right:0;
+	margin:auto;
+	background-color:#fff;
+	border:1px solid #fff;
+	-webkit-transform:rotate(45deg);
+	   -moz-transform:rotate(45deg);
+	    -ms-transform:rotate(45deg);
+	     -o-transform:rotate(45deg);
+	        transform:rotate(45deg); 
+}
+/* 音乐按钮旋转  */
+.music{
+	-webkit-animation:rotating 2s linear infinite;
+	   -moz-animation:rotating 2s linear infinite;
+	    -ms-animation:rotating 2s linear infinite;
+	     -o-animation:rotating 2s linear infinite;
+	        animation:rotating 2s linear infinite;
+}
+@-webkit-keyframes rotating{
+	 0% {-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);}
+   50% {-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);}
+   100% {-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);}
+}
+@-moz-keyframes rotating{
+	 0% {-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);}
+   50% {-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);}
+   100% {-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);}
+}
+@-ms-keyframes rotating{
+	 0% {-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);}
+   50% {-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);}
+   100% {-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);}
+}
+@-o-keyframes rotating{
+	 0% {-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);}
+   50% {-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);}
+   100% {-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);}
+}
+@keyframes rotating{
+	 0% {-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);}
+   50% {-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);}
+   100% {-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);}
+}
+/* 电池电量动画 */
+@-webkit-keyframes wchanging{
+	0%{width:12px}
+	100%{width:24px}
+}
+@-moz-keyframes wchanging{
+	0%{width:12px}
+	100%{width:24px}
+}
+@-ms-keyframes wchanging{
+	0%{width:12px}
+	100%{width:24px}
+}
+@-o-keyframes wchanging{
+	0%{width:12px}
+	100%{width:24px}
+}
+@keyframes wchanging{
+	0%{width:12px}
+	100%{width:24px}
+}
+/* 信号闪烁动画 */
+@-webkit-keyframes signal1{
+	0%{opacity:0}
+	50%{opacity:1}
+	100%{opacity:1}
+}
+@-moz-keyframes signal1{
+	0%{opacity:0}
+	50%{opacity:1}
+	100%{opacity:1}
+}
+@-ms-keyframes signal1{
+	0%{opacity:0}
+	50%{opacity:1}
+	100%{opacity:1}
+}
+@-o-keyframes signal1{
+	0%{opacity:0}
+	50%{opacity:1}
+	100%{opacity:1}
+}
+@keyframes signal1{
+	0%{opacity:0}
+	50%{opacity:1}
+	100%{opacity:1}
+}
+@-webkit-keyframes signal2{
+	0%{opacity:0}
+	50%{opacity:0}
+	100%{opacity:1}
+}
+@-moz-keyframes signal2{
+	0%{opacity:0}
+	50%{opacity:0}
+	100%{opacity:1}
+}
+@-ms-keyframes signal2{
+	0%{opacity:0}
+	50%{opacity:0}
+	100%{opacity:1}
+}
+@-o-keyframes signal2{
+	0%{opacity:0}
+	50%{opacity:0}
+	100%{opacity:1}
+}
+@keyframes signal2{
+	0%{opacity:0}
+	50%{opacity:0}
+	100%{opacity:1}
+}
+/* 箭头特效 */
+@-webkit-keyframes jt{
+	0%{bottom:20px;opacity:0;}
+	50%{bottom:50px;opacity:1;}
+	100%{bottom:80px;opacity:0;}
+}
+@-moz-keyframes jt{
+	0%{bottom:20px;opacity:0;}
+	50%{bottom:50px;opacity:1;}
+	100%{bottom:80px;opacity:0;}
+}
+@-ms-keyframes jt{
+	0%{bottom:20px;opacity:0;}
+	50%{bottom:50px;opacity:1;}
+	100%{bottom:80px;opacity:0;}
+}
+@-o-keyframes jt{
+	0%{bottom:20px;opacity:0;}
+	50%{bottom:50px;opacity:1;}
+	100%{bottom:80px;opacity:0;}
+}
+@keyframes jt{
+	0%{bottom:20px;opacity:0;}
+	50%{bottom:50px;opacity:1;}
+	100%{bottom:80px;opacity:0;}
+}
+/* 按钮闪烁 */
+@-webkit-keyframes shadowing{
+	0%{box-shadow:0 0 3px 2px rgb(255,221,0) inset;}
+	50%{box-shadow:0 0 10px 10px rgb(255,221,0) inset;}
+	100%{box-shadow:0 0 3px 2px rgb(255,221,0) inset;}
+}
+@-moz-keyframes shadowing{
+	0%{box-shadow:0 0 3px 2px rgb(255,221,0) inset;}
+	50%{box-shadow:0 0 10px 10px rgb(255,221,0) inset;}
+	100%{box-shadow:0 0 3px 2px rgb(255,221,0) inset;}
+}
+@-ms-keyframes shadowing{
+	0%{box-shadow:0 0 3px 2px rgb(255,221,0) inset;}
+	50%{box-shadow:0 0 10px 10px rgb(255,221,0) inset;}
+	100%{box-shadow:0 0 3px 2px rgb(255,221,0) inset;}
+}
+@-o-keyframes shadowing{
+	0%{box-shadow:0 0 3px 2px rgb(255,221,0) inset;}
+	50%{box-shadow:0 0 10px 10px rgb(255,221,0) inset;}
+	100%{box-shadow:0 0 3px 2px rgb(255,221,0) inset;}
+}
+@keyframes shadowing{
+	0%{box-shadow:0 0 3px 2px rgb(255,221,0) inset;}
+	50%{box-shadow:0 0 10px 10px rgb(255,221,0) inset;}
+	100%{box-shadow:0 0 3px 2px rgb(255,221,0) inset;}
+}
+/* 点击按钮背景切换 */
+.hiding{
+	-webkit-animation:hiding 1s ease-in 1 forwards;
+	   -moz-animation:hiding 1s ease-in 1 forwards;
+	    -ms-animation:hiding 1s ease-in 1 forwards;
+	     -o-animation:hiding 1s ease-in 1 forwards;
+	        animation:hiding 1s ease-in 1 forwards;
+}
+@-webkit-keyframes hiding{
+	0%{height:540px;}
+	100%{height:0px;border-bottom:0px;}
+}
+@-moz-keyframes hiding{
+	0%{height:540px;}
+	100%{height:0px;border-bottom:0px;}
+}
+@-ms-keyframes hiding{
+	0%{height:540px;}
+	100%{height:0px;border-bottom:0px;}
+}
+@-o-keyframes hiding{
+	0%{height:540px;}
+	100%{height:0px;border-bottom:0px;}
+}
+@keyframes hiding{
+	0%{height:540px;}
+	100%{height:0px;border-bottom:0px;}
+}
+
+.showing{
+	-webkit-animation:showing 1s ease-in 1 forwards;
+	   -moz-animation:showing 1s ease-in 1 forwards;
+	    -ms-animation:showing 1s ease-in 1 forwards;
+	     -o-animation:showing 1s ease-in 1 forwards;
+	        animation:showing 1s ease-in 1 forwards;
+}
+@-webkit-keyframes showing{
+	0%{height:0px;}
+	100%{height:540px}
+}
+@-moz-keyframes showing{
+	0%{height:0px;}
+	100%{height:540px}
+}
+@-ms-keyframes showing{
+	0%{height:0px;}
+	100%{height:540px}
+}
+@-o-keyframes showing{
+	0%{height:0px;}
+	100%{height:540px}
+}
+@keyframes showing{
+	0%{height:0px;}
+	100%{height:540px}
+}
+
+
+
